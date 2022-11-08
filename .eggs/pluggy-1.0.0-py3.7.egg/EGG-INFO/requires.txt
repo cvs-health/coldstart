@@ -1,0 +1,9 @@
+importlib-metadata>=0.12
+
+[dev]
+pre-commit
+tox
+
+[testing]
+pytest
+pytest-benchmark

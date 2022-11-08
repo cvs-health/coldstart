@@ -1,0 +1,16 @@
+attrs>=19.2.0
+iniconfig
+packaging
+pluggy<2.0,>=0.12
+exceptiongroup>=1.0.0rc8
+tomli>=1.0.0
+importlib-metadata>=0.12
+
+[testing]
+argcomplete
+hypothesis>=3.56
+mock
+nose
+pygments>=2.7.2
+requests
+xmlschema

@@ -1,0 +1,529 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Quickstart &mdash; coldstart 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="coldstart" href="modules.html" />
+    <link rel="prev" title="Welcome to coldstart’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> coldstart
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quickstart</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#features-under-development">Features Under Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contributor-guide">Contributor Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">coldstart</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">coldstart</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Quickstart</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/readme.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="quickstart">
+<h1>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this heading">¶</a></h1>
+<p>coldstart is a package for automatic data collection and feature
+engineering that should be used by new and seasoned data scientists or
+engineers interested in accelerating model development.</p>
+<p>Data collection and feature engineering are among the most tedious and
+time-consuming steps in the data science workflow. coldstart aims to
+solve this problem by encapsulating efficient patterns and abstracting
+away low-level details associated with dynamic query templating, query
+optimization, concurrent execution, memory management, data leakage, and
+pipeline deployment.</p>
+<p>coldstart is meant to be a “Goldilocks” solution that sits somewhere
+between a collection of version-controlled queries and a full-fledged
+feature store. If you’re making batch predictions that do not require
+ultra-low latency guarantees or if you’re not taking full advantage of
+the warehouse’s available computing resources, then this package might
+be prefect for you.</p>
+<p>coldstart embraces a code that writes code mindset by exposing a
+powerful class (<code class="docutils literal notranslate"><span class="pre">FeatureFactory</span></code>) that retrieves data from various
+user-defined domains by establishing 1:1 or 1:M relationships with
+peer-reviewed queries that are templated at runtime based on user input
+and executed concurrently in one or many batches. The output comes in
+the form of a single wide dataframe that can be held in memory (i.e.,
+pandas) or on disk (i.e., dask) and then fed directly into a feature
+engineering/modeling pipeline (e.g., sklearn). Row-level observations
+are identifiable through the use of composite indexes that have two
+parts to them: an entity component and a temporal component, which
+satisfy most tabular supervised ML use cases. When it’s time to move
+from development to production, a user can “freeze” the queries that
+they will be using in their prediction pipeline.</p>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">¶</a></h2>
+<p>The latest version can be installed from PyPI:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install coldstart
+</pre></div>
+</div>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">¶</a></h2>
+<p>Here is a basic example of how to use <code class="docutils literal notranslate"><span class="pre">FeatureFactory</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">coldstart</span> <span class="kn">import</span> <span class="n">FeatureFactory</span>
+
+<span class="c1"># Instantiate FeatureFactory</span>
+<span class="n">ff</span> <span class="o">=</span> <span class="n">FeatureFactory</span><span class="p">()</span>
+
+<span class="c1"># List available query domains</span>
+<span class="n">my_domains</span> <span class="o">=</span> <span class="n">ff</span><span class="o">.</span><span class="n">list_domains</span><span class="p">(</span><span class="n">dialect</span><span class="o">=</span><span class="s1">&#39;bigquery&#39;</span><span class="p">,</span> <span class="n">entity_id</span><span class="o">=</span><span class="s1">&#39;team_id&#39;</span><span class="p">)</span> <span class="c1"># replace with your entity_id</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Available domains: </span><span class="si">{</span><span class="n">my_domains</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># Set database spec</span>
+<span class="n">db_spec</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;dialect&#39;</span><span class="p">:</span> <span class="s1">&#39;bigquery&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;project_id&#39;</span><span class="p">:</span> <span class="n">PROJECT_ID</span><span class="p">,</span> <span class="c1"># replace with your project if using Big Query</span>
+    <span class="s1">&#39;schema&#39;</span><span class="p">:</span> <span class="s1">&#39;my_schema&#39;</span> <span class="c1"># replace with your schema/dataset</span>
+<span class="p">}</span>
+
+<span class="c1"># Start engine</span>
+<span class="n">ff</span><span class="o">.</span><span class="n">start_engine</span><span class="p">(</span><span class="n">db_spec</span><span class="p">)</span>
+
+<span class="c1"># Run feature_factory</span>
+<span class="n">ff</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+    <span class="n">leftmost_table</span><span class="o">=</span><span class="s1">&#39;my_schema.my_leftmost_table&#39;</span><span class="p">,</span> <span class="c1"># table with columns: entity_id and y</span>
+    <span class="n">feature_table</span><span class="o">=</span><span class="s1">&#39;my_schema.my_feature_table&#39;</span><span class="p">,</span>
+    <span class="n">entity_id</span><span class="o">=</span><span class="s1">&#39;team_id&#39;</span><span class="p">,</span>
+    <span class="n">domains</span><span class="o">=</span><span class="n">my_domains</span><span class="p">,</span>
+    <span class="n">date_range</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;2010-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2015-01-01&#39;</span><span class="p">],</span>
+<span class="p">)</span>
+
+<span class="c1"># Return dataframe</span>
+<span class="n">features_df</span> <span class="o">=</span> <span class="n">ff</span><span class="o">.</span><span class="n">get_dataframe</span><span class="p">()</span>
+
+<span class="c1"># Stop engine</span>
+<span class="n">ff</span><span class="o">.</span><span class="n">stop_engine</span><span class="p">()</span>
+
+<span class="c1"># View dataframe</span>
+<span class="n">features_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>See <a class="reference external" href="examples/Quickstart.ipynb">this notebook</a> for a more thorough
+example.</p>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">my_schema.my_leftmost_table</span></code> must be a predefined table
+with at least 2 columns: <code class="docutils literal notranslate"><span class="pre">entity_id</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> where entity_id is
+corresponds with the tagged queries in the query bank and y corresponds
+with the dependent variable that you’re eventually modeling. Optionally,
+you can also include a <code class="docutils literal notranslate"><span class="pre">min_date</span></code> and a <code class="docutils literal notranslate"><span class="pre">max_date</span></code> column so that
+each row is parameterized accordingly (if you do not include dates in
+your table, the <code class="docutils literal notranslate"><span class="pre">date_range</span></code> argument will be used for all records). A
+typical <code class="docutils literal notranslate"><span class="pre">leftmost_table</span></code> will look like this:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>entity_id</p></th>
+<th class="head"><p>y</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>abc</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>def</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>…</p></td>
+<td><p>…</p></td>
+</tr>
+</tbody>
+</table>
+<p>Or:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>entity_id</p></th>
+<th class="head"><p>y</p></th>
+<th class="head"><p>min_date</p></th>
+<th class="head"><p>max_date</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>abc</p></td>
+<td><p>0</p></td>
+<td><p>2020-01-01</p></td>
+<td><p>2020-12-31</p></td>
+</tr>
+<tr class="row-odd"><td><p>abc</p></td>
+<td><p>1</p></td>
+<td><p>2021-01-01</p></td>
+<td><p>2021-12-31</p></td>
+</tr>
+<tr class="row-even"><td><p>def</p></td>
+<td><p>0</p></td>
+<td><p>2020-01-01</p></td>
+<td><p>2020-12-31</p></td>
+</tr>
+<tr class="row-odd"><td><p>def</p></td>
+<td><p>1</p></td>
+<td><p>2021-01-01</p></td>
+<td><p>2021-12-31</p></td>
+</tr>
+<tr class="row-even"><td><p>…</p></td>
+<td><p>…</p></td>
+<td><p>…</p></td>
+<td><p>…</p></td>
+</tr>
+</tbody>
+</table>
+<p>Queries in the query bank must adhere to an established pattern. It’s
+this pattern that makes consistent dynamic runtime templating possible.
+All queries must:</p>
+<ul class="simple">
+<li><p>Have a unique file name</p>
+<ul>
+<li><p><strong>Tip</strong>: By beginning the file name with the corresponding entity
+and domain name, you will easily be able to estasblish feature
+lineage back to the query because the final table appends the
+query name to the column name to ensure uniqueness</p></li>
+</ul>
+</li>
+<li><p>Be tagged with <code class="docutils literal notranslate"><span class="pre">DIALECT</span></code>, <code class="docutils literal notranslate"><span class="pre">ENTITY</span></code>, and <code class="docutils literal notranslate"><span class="pre">DOMAIN</span></code></p></li>
+<li><p>Use the default <code class="docutils literal notranslate"><span class="pre">idx</span></code> column (which is a concatonation of
+<code class="docutils literal notranslate"><span class="pre">entity_id</span></code> + <code class="docutils literal notranslate"><span class="pre">min_date</span></code> + <code class="docutils literal notranslate"><span class="pre">max_date</span></code>) in the <strong>SELECT</strong> in all
+CTEs/subqueries and the outer-most query</p>
+<ul>
+<li><p><strong>Tip</strong>: You do not need to carry the <code class="docutils literal notranslate"><span class="pre">entity_id</span></code>, <code class="docutils literal notranslate"><span class="pre">min_date</span></code>,
+or <code class="docutils literal notranslate"><span class="pre">max_date</span></code> down through CTEs/subqueries because it is baked
+into <code class="docutils literal notranslate"><span class="pre">idx</span></code></p></li>
+</ul>
+</li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">{LEFTMOST_TABLE}</span></code> variable as the left-most table in the
+<strong>FROM</strong></p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">min_date</span></code> and <code class="docutils literal notranslate"><span class="pre">max_date</span></code> to constrain relevent date columns
+in the <strong>WHERE</strong></p></li>
+<li><p>Have an outer-most query that uses <code class="docutils literal notranslate"><span class="pre">idx</span></code> in the <strong>GROUP BY</strong></p></li>
+</ul>
+<p>A typical query (e.g., <code class="docutils literal notranslate"><span class="pre">teamGameStats.sql</span></code>) will look something like
+this:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span>-- DIALECT: your_dialect (e.g., bigquery)
+-- ENTITY: your_entity_id (e.g., team_id)
+-- DOMAIN: your_domain (e.g., game)
+WITH T1 AS (
+    SELECT
+        LMT.idx,
+        A.some_column,
+        B.some_other_column,
+        ...
+    FROM
+        {LEFTMOST_TABLE} AS LMT
+        INNER JOIN some_schema.some_table_1 AS A
+            ON LMT.team_id = A.team_id
+        LEFT JOIN some_schema.some_table_2 AS B
+            ON A.id = B.team_id
+        ...
+    WHERE
+        some_date_column &gt;= LMT.min_date
+        AND some_date_column &lt;= LMT.max_date
+        ...
+)
+SELECT
+    T1.idx,
+    SUM(T1.some_column) AS some_sum,
+    SUM(T1.some_other_column) AS some_other_sum,
+    ...
+FROM
+    T1
+GROUP BY
+    T1.idx
+</pre></div>
+</div>
+<p>If you’re looking for more fine-grained control over which queries to
+run, you can use the <code class="docutils literal notranslate"><span class="pre">queries</span></code> parameter, as opposed to the
+<code class="docutils literal notranslate"><span class="pre">domains</span></code> parameter. Before doing so though, you’ll need to
+familiarize yourself with the queries in the query bank.</p>
+<p>After running, you should get back a table/dataframe that is as wide as
+the total number of columns returned in all underlying queries’
+outer-most SELECT (plus <code class="docutils literal notranslate"><span class="pre">idx</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>). Building off of the earlier
+example, the <code class="docutils literal notranslate"><span class="pre">feature_table</span></code> and/or returned dataframe would look like
+this:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>idx</p></th>
+<th class="head"><p>y</p></th>
+<th class="head"><p>teamG
+ameStats_some_sum</p></th>
+<th class="head"><p>teamGameSta
+ts_some_other_sum</p></th>
+<th class="head"><p>…</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>abc_2010
+-01-01_2015-01-01</p></td>
+<td><p>0</p></td>
+<td><p>50</p></td>
+<td><p>100</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>def_2010
+-01-01_2015-01-01</p></td>
+<td><p>0</p></td>
+<td><p>25</p></td>
+<td><p>200</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-even"><td><p>…</p></td>
+<td><p>…</p></td>
+<td><p>…</p></td>
+<td><p>…</p></td>
+<td><p>…</p></td>
+</tr>
+</tbody>
+</table>
+<p>Which can then be passed into a boilerplate pipeline like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.impute</span> <span class="kn">import</span> <span class="n">SimpleImputer</span>
+<span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">FeatureUnion</span><span class="p">,</span> <span class="n">Pipeline</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.compose</span> <span class="kn">import</span> <span class="n">ColumnTransformer</span><span class="p">,</span> <span class="n">make_column_selector</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">VarianceThreshold</span><span class="p">,</span> <span class="n">SelectKBest</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">FunctionTransformer</span><span class="p">,</span>
+    <span class="n">OneHotEncoder</span><span class="p">,</span>
+    <span class="n">KBinsDiscretizer</span><span class="p">,</span>
+    <span class="n">StandardScaler</span><span class="p">,</span>
+    <span class="n">PolynomialFeatures</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># Set features and class label</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">:]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Train test split</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">stratify</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Instantiate classifier</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Construct pipeline</span>
+<span class="n">pipe</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[</span>
+    <span class="p">(</span><span class="s1">&#39;features&#39;</span><span class="p">,</span> <span class="n">FeatureUnion</span><span class="p">([</span>
+        <span class="p">(</span><span class="s1">&#39;numerical_features&#39;</span><span class="p">,</span> <span class="n">ColumnTransformer</span><span class="p">([</span>
+            <span class="p">(</span><span class="s1">&#39;numeric_transformer&#39;</span><span class="p">,</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[</span>
+                <span class="p">(</span><span class="s1">&#39;num_imputer&#39;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s1">&#39;constant&#39;</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">)),</span>
+                <span class="p">(</span><span class="s1">&#39;num_scaler&#39;</span><span class="p">,</span> <span class="n">StandardScaler</span><span class="p">()),</span>
+            <span class="p">]),</span> <span class="n">make_column_selector</span><span class="p">(</span><span class="n">dtype_include</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">)),</span>
+        <span class="p">],</span> <span class="n">n_jobs</span><span class="o">=</span><span class="mi">10</span><span class="p">)),</span>
+        <span class="p">(</span><span class="s1">&#39;categorical_features&#39;</span><span class="p">,</span> <span class="n">ColumnTransformer</span><span class="p">([</span>
+            <span class="p">(</span><span class="s1">&#39;categorical_transformer&#39;</span><span class="p">,</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[</span>
+                <span class="p">(</span><span class="s1">&#39;cat_imputer&#39;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s1">&#39;constant&#39;</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="s1">&#39;NA&#39;</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">)),</span>
+                <span class="p">(</span><span class="s1">&#39;cat_onehot&#39;</span><span class="p">,</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">sparse</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)),</span>
+            <span class="p">]),</span> <span class="n">make_column_selector</span><span class="p">(</span><span class="n">dtype_include</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">CategoricalDtype</span><span class="p">)),</span>
+        <span class="p">],</span> <span class="n">n_jobs</span><span class="o">=</span><span class="mi">10</span><span class="p">)),</span>
+    <span class="p">],</span> <span class="n">n_jobs</span><span class="o">=</span><span class="mi">10</span><span class="p">)),</span>
+    <span class="p">(</span><span class="s1">&#39;classifier&#39;</span><span class="p">,</span> <span class="n">clf</span><span class="p">),</span>
+<span class="p">])</span>
+
+<span class="c1"># Fit pipeline</span>
+<span class="n">pipe</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Again, see <a class="reference external" href="examples/Quickstart.ipynb">this notebook</a> for a more
+thorough example.</p>
+</section>
+<section id="features-under-development">
+<h2>Features Under Development<a class="headerlink" href="#features-under-development" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Switch for writing intermediate results to Parquet files</p></li>
+<li><p>Option to return Dask DataFrame</p></li>
+<li><p>Testing for more databases</p></li>
+<li><p>Retrying decorator for run_query</p></li>
+</ul>
+</section>
+<section id="contributor-guide">
+<h2>Contributor Guide<a class="headerlink" href="#contributor-guide" title="Permalink to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Before contributing to this CVS Health sponsored project, you will
+need to sign the associated <a class="reference external" href="https://forms.office.com/r/HvYxTheDG5">Contributor License
+Agreement</a>.</p></li>
+<li><p>Open an issue or PR</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="modules.html" class="btn btn-neutral float-right" title="coldstart" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to coldstart’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
