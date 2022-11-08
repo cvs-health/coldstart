@@ -1,4 +1,4 @@
-coldstart
+coldstart-oss
 =============
 
 .. toctree::

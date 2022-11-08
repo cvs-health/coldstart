@@ -1,70 +1,35 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>coldstart package &mdash; coldstart 0.1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-
-  
-  
-  
-  
-
-  
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="coldstart " href="modules.html" /> 
+    <link rel="prev" title="coldstart-oss" href="modules.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="index.html" class="icon icon-home"> coldstart
-          
-
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -72,118 +37,102 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="readme.html">Quickstart</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="modules.html">coldstart </a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="readme.html#documentation">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html#usage">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html#features-under-development">Features Under Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html#contributor-guide">Contributor Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">coldstart-oss</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">coldstart package</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-coldstart.build">coldstart.build module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-coldstart.parse">coldstart.parse module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-coldstart.query">coldstart.query module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-coldstart">Module contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-coldstart.build">coldstart.build module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#coldstart.build.FeatureFactory"><code class="docutils literal notranslate"><span class="pre">FeatureFactory</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-coldstart.parse">coldstart.parse module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#coldstart.parse.get_queries"><code class="docutils literal notranslate"><span class="pre">get_queries()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#coldstart.parse.get_queries_from_domains"><code class="docutils literal notranslate"><span class="pre">get_queries_from_domains()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#coldstart.parse.list_dialects"><code class="docutils literal notranslate"><span class="pre">list_dialects()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#coldstart.parse.list_domains"><code class="docutils literal notranslate"><span class="pre">list_domains()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#coldstart.parse.list_entities"><code class="docutils literal notranslate"><span class="pre">list_entities()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#coldstart.parse.list_queries"><code class="docutils literal notranslate"><span class="pre">list_queries()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-coldstart.query">coldstart.query module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#coldstart.query.attempt_downcast"><code class="docutils literal notranslate"><span class="pre">attempt_downcast()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#coldstart.query.collect_metadata"><code class="docutils literal notranslate"><span class="pre">collect_metadata()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#coldstart.query.convert_categorical"><code class="docutils literal notranslate"><span class="pre">convert_categorical()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#coldstart.query.drop_tables"><code class="docutils literal notranslate"><span class="pre">drop_tables()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#coldstart.query.freeze_queries"><code class="docutils literal notranslate"><span class="pre">freeze_queries()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#coldstart.query.multi_query"><code class="docutils literal notranslate"><span class="pre">multi_query()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#coldstart.query.name_table"><code class="docutils literal notranslate"><span class="pre">name_table()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#coldstart.query.prep_join_query"><code class="docutils literal notranslate"><span class="pre">prep_join_query()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#coldstart.query.run_query"><code class="docutils literal notranslate"><span class="pre">run_query()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#coldstart.query.run_threaded_query"><code class="docutils literal notranslate"><span class="pre">run_threaded_query()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#coldstart.query.stage_leftmost_table"><code class="docutils literal notranslate"><span class="pre">stage_leftmost_table()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#coldstart.query.template_queries"><code class="docutils literal notranslate"><span class="pre">template_queries()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-coldstart">Module contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#coldstart.FeatureFactory"><code class="docutils literal notranslate"><span class="pre">FeatureFactory</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 
-            
-          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">coldstart</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-          <li><a href="modules.html">coldstart </a> &raquo;</li>
-        
-      <li>coldstart package</li>
-    
-    
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">coldstart-oss</a></li>
+      <li class="breadcrumb-item active">coldstart package</li>
       <li class="wy-breadcrumbs-aside">
-        
-            
             <a href="_sources/coldstart.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <section id="coldstart-package">
-<h1>coldstart package<a class="headerlink" href="#coldstart-package" title="Permalink to this heading">¶</a></h1>
+<h1>coldstart package<a class="headerlink" href="#coldstart-package" title="Permalink to this heading"></a></h1>
 <section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">¶</a></h2>
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
 </section>
 <section id="module-coldstart.build">
-<span id="coldstart-build-module"></span><h2>coldstart.build module<a class="headerlink" href="#module-coldstart.build" title="Permalink to this heading">¶</a></h2>
+<span id="coldstart-build-module"></span><h2>coldstart.build module<a class="headerlink" href="#module-coldstart.build" title="Permalink to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="coldstart.build.FeatureFactory">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldstart.build.</span></span><span class="sig-name descname"><span class="pre">FeatureFactory</span></span><a class="headerlink" href="#coldstart.build.FeatureFactory" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldstart.build.</span></span><span class="sig-name descname"><span class="pre">FeatureFactory</span></span><a class="headerlink" href="#coldstart.build.FeatureFactory" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p> coldstart’s main class</p>
+<p>Coldstart’s main class</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="coldstart.build.FeatureFactory.get_dataframe">
-<span class="sig-name descname"><span class="pre">get_dataframe</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.build.FeatureFactory.get_dataframe" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_dataframe</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.build.FeatureFactory.get_dataframe" title="Permalink to this definition"></a></dt>
 <dd><p>For returning a dataframe object</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>Training data</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>DataFrame</p>
 </dd>
 </dl>
@@ -191,13 +140,13 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="coldstart.build.FeatureFactory.get_table">
-<span class="sig-name descname"><span class="pre">get_table</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.build.FeatureFactory.get_table" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_table</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.build.FeatureFactory.get_table" title="Permalink to this definition"></a></dt>
 <dd><p>For returning final feature table name</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>Table name containing training data</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>str</p>
 </dd>
 </dl>
@@ -205,10 +154,10 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="coldstart.build.FeatureFactory.run">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">leftmost_table</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_table</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domains</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queries</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">export_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drop_intermedieate_tables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_df</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compute_df</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_on_error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">downcast</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batching</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.build.FeatureFactory.run" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">leftmost_table</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_table</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domains</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queries</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">export_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drop_intermedieate_tables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_df</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compute_df</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_on_error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">downcast</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batching</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.build.FeatureFactory.run" title="Permalink to this definition"></a></dt>
 <dd><p>Used for running FeatureFactory</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>leftmost_table</strong> (<em>str</em>) – Left-most table used for constraining feature
 queries. Should include entity_id and y. Can also include
@@ -242,7 +191,7 @@ Defaults to False.</p></li>
 Defaults to None.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>ValueError</strong> – Error for missing engine</p></li>
 <li><p><strong>ValueError</strong> – Error for errored queries</p></li>
@@ -253,13 +202,13 @@ Defaults to None.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="coldstart.build.FeatureFactory.start_engine">
-<span class="sig-name descname"><span class="pre">start_engine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_spec</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.build.FeatureFactory.start_engine" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">start_engine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_spec</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.build.FeatureFactory.start_engine" title="Permalink to this definition"></a></dt>
 <dd><p>Starts SQLAlchemy engine</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>db_spec</strong> (<em>dict</em>) – Used as the config for create_engine</p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>ValueError</strong> – Error for missing dialect</p></li>
 <li><p><strong>ValueError</strong> – Error for missing schema</p></li>
@@ -273,7 +222,7 @@ Defaults to None.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="coldstart.build.FeatureFactory.stop_engine">
-<span class="sig-name descname"><span class="pre">stop_engine</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.build.FeatureFactory.stop_engine" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">stop_engine</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.build.FeatureFactory.stop_engine" title="Permalink to this definition"></a></dt>
 <dd><p>Stops SQLAlchemy engine</p>
 </dd></dl>
 
@@ -281,13 +230,13 @@ Defaults to None.</p></li>
 
 </section>
 <section id="module-coldstart.parse">
-<span id="coldstart-parse-module"></span><h2>coldstart.parse module<a class="headerlink" href="#module-coldstart.parse" title="Permalink to this heading">¶</a></h2>
+<span id="coldstart-parse-module"></span><h2>coldstart.parse module<a class="headerlink" href="#module-coldstart.parse" title="Permalink to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="coldstart.parse.get_queries">
-<span class="sig-prename descclassname"><span class="pre">coldstart.parse.</span></span><span class="sig-name descname"><span class="pre">get_queries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dialect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queries</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.parse.get_queries" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">coldstart.parse.</span></span><span class="sig-name descname"><span class="pre">get_queries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dialect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queries</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.parse.get_queries" title="Permalink to this definition"></a></dt>
 <dd><p>Prepares dictionary of queries to template for given queries</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>dialect</strong> (<em>str</em>) – Dialect of interest. Defaults to None.</p></li>
 <li><p><strong>entity_id</strong> (<em>str</em>) – Entity of interest. Defaults to None.</p></li>
@@ -296,7 +245,7 @@ Defaults to None.</p></li>
 If None, coldstart/query_bank is used. Defaults to None.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>ValueError</strong> – Error for missing dialect</p></li>
 <li><p><strong>ValueError</strong> – Error for invalid dialect</p></li>
@@ -305,10 +254,10 @@ If None, coldstart/query_bank is used. Defaults to None.</p></li>
 <li><p><strong>ValueError</strong> – Error for invalid query</p></li>
 </ul>
 </dd>
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>Dictionary of queries to template</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>dict</p>
 </dd>
 </dl>
@@ -316,10 +265,10 @@ If None, coldstart/query_bank is used. Defaults to None.</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="coldstart.parse.get_queries_from_domains">
-<span class="sig-prename descclassname"><span class="pre">coldstart.parse.</span></span><span class="sig-name descname"><span class="pre">get_queries_from_domains</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dialect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domains</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.parse.get_queries_from_domains" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">coldstart.parse.</span></span><span class="sig-name descname"><span class="pre">get_queries_from_domains</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dialect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domains</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.parse.get_queries_from_domains" title="Permalink to this definition"></a></dt>
 <dd><p>Prepares dictionary of queries to template for given domains</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>dialect</strong> (<em>str</em>) – Dialect of interest. Defaults to None.</p></li>
 <li><p><strong>entity_id</strong> (<em>str</em>) – Entity of interest. Defaults to None.</p></li>
@@ -328,7 +277,7 @@ If None, coldstart/query_bank is used. Defaults to None.</p></li>
 If None, coldstart/query_bank is used. Defaults to None.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>ValueError</strong> – Error for missing dialect</p></li>
 <li><p><strong>ValueError</strong> – Error for invalid dialect</p></li>
@@ -337,10 +286,10 @@ If None, coldstart/query_bank is used. Defaults to None.</p></li>
 <li><p><strong>ValueError</strong> – Error for invalid domain</p></li>
 </ul>
 </dd>
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>Dictionary of queries to template</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>dict</p>
 </dd>
 </dl>
@@ -348,17 +297,17 @@ If None, coldstart/query_bank is used. Defaults to None.</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="coldstart.parse.list_dialects">
-<span class="sig-prename descclassname"><span class="pre">coldstart.parse.</span></span><span class="sig-name descname"><span class="pre">list_dialects</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.parse.list_dialects" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">coldstart.parse.</span></span><span class="sig-name descname"><span class="pre">list_dialects</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.parse.list_dialects" title="Permalink to this definition"></a></dt>
 <dd><p>Return list of available dialects</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>query_dir</strong> (<em>str</em>) – Target directory containing feature queries.
 If None, coldstart/query_bank is used. Defaults to None.</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>List of available dialects</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>list</p>
 </dd>
 </dl>
@@ -366,10 +315,10 @@ If None, coldstart/query_bank is used. Defaults to None.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="coldstart.parse.list_domains">
-<span class="sig-prename descclassname"><span class="pre">coldstart.parse.</span></span><span class="sig-name descname"><span class="pre">list_domains</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dialect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.parse.list_domains" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">coldstart.parse.</span></span><span class="sig-name descname"><span class="pre">list_domains</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dialect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.parse.list_domains" title="Permalink to this definition"></a></dt>
 <dd><p>Return list of available domains</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>dialect</strong> (<em>str</em>) – Dialect of interest. Defaults to None.</p></li>
 <li><p><strong>entity_id</strong> (<em>str</em>) – Entity of interest. Defaults to None.</p></li>
@@ -377,7 +326,7 @@ If None, coldstart/query_bank is used. Defaults to None.</p>
 If None, coldstart/query_bank is used. Defaults to None.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>ValueError</strong> – Error for missing dialect</p></li>
 <li><p><strong>ValueError</strong> – Error for invalid dialect</p></li>
@@ -385,10 +334,10 @@ If None, coldstart/query_bank is used. Defaults to None.</p></li>
 <li><p><strong>ValueError</strong> – Error for invalid entity_id</p></li>
 </ul>
 </dd>
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>List of available domains</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>list</p>
 </dd>
 </dl>
@@ -396,26 +345,26 @@ If None, coldstart/query_bank is used. Defaults to None.</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="coldstart.parse.list_entities">
-<span class="sig-prename descclassname"><span class="pre">coldstart.parse.</span></span><span class="sig-name descname"><span class="pre">list_entities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dialect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.parse.list_entities" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">coldstart.parse.</span></span><span class="sig-name descname"><span class="pre">list_entities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dialect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.parse.list_entities" title="Permalink to this definition"></a></dt>
 <dd><p>Return list of available entities</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>dialect</strong> (<em>str</em>) – Dialect of interest. Defaults to None.</p></li>
 <li><p><strong>query_dir</strong> (<em>str</em>) – Target directory containing feature queries.
 If None, coldstart/query_bank is used. Defaults to None.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>ValueError</strong> – Error for missing dialect</p></li>
 <li><p><strong>ValueError</strong> – Error for involid dialect</p></li>
 </ul>
 </dd>
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>List of available entities</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>list</p>
 </dd>
 </dl>
@@ -423,10 +372,10 @@ If None, coldstart/query_bank is used. Defaults to None.</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="coldstart.parse.list_queries">
-<span class="sig-prename descclassname"><span class="pre">coldstart.parse.</span></span><span class="sig-name descname"><span class="pre">list_queries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dialect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domains</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.parse.list_queries" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">coldstart.parse.</span></span><span class="sig-name descname"><span class="pre">list_queries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dialect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domains</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.parse.list_queries" title="Permalink to this definition"></a></dt>
 <dd><p>Return list of available queries</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>dialect</strong> (<em>str</em>) – Dialect of interest. Defaults to None.</p></li>
 <li><p><strong>entity_id</strong> (<em>str</em>) – Entity of interest. Defaults to None.</p></li>
@@ -435,7 +384,7 @@ If None, coldstart/query_bank is used. Defaults to None.</p></li>
 If None, coldstart/query_bank is used. Defaults to None.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>ValueError</strong> – Error for missing dialect</p></li>
 <li><p><strong>ValueError</strong> – Error for invalid dialect</p></li>
@@ -444,10 +393,10 @@ If None, coldstart/query_bank is used. Defaults to None.</p></li>
 <li><p><strong>ValueError</strong> – Error for invalid domain</p></li>
 </ul>
 </dd>
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>List of available queries</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>list</p>
 </dd>
 </dl>
@@ -455,19 +404,19 @@ If None, coldstart/query_bank is used. Defaults to None.</p></li>
 
 </section>
 <section id="module-coldstart.query">
-<span id="coldstart-query-module"></span><h2>coldstart.query module<a class="headerlink" href="#module-coldstart.query" title="Permalink to this heading">¶</a></h2>
+<span id="coldstart-query-module"></span><h2>coldstart.query module<a class="headerlink" href="#module-coldstart.query" title="Permalink to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="coldstart.query.attempt_downcast">
-<span class="sig-prename descclassname"><span class="pre">coldstart.query.</span></span><span class="sig-name descname"><span class="pre">attempt_downcast</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.query.attempt_downcast" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">coldstart.query.</span></span><span class="sig-name descname"><span class="pre">attempt_downcast</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.query.attempt_downcast" title="Permalink to this definition"></a></dt>
 <dd><p>For attempting data type downcasting</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>df</strong> (<em>DataFrame</em>) – To attempt downcasting on</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Downcasted dataframe</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>DataFrame</p>
 </dd>
 </dl>
@@ -475,20 +424,20 @@ If None, coldstart/query_bank is used. Defaults to None.</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="coldstart.query.collect_metadata">
-<span class="sig-prename descclassname"><span class="pre">coldstart.query.</span></span><span class="sig-name descname"><span class="pre">collect_metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">engine</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.query.collect_metadata" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">coldstart.query.</span></span><span class="sig-name descname"><span class="pre">collect_metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">engine</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.query.collect_metadata" title="Permalink to this definition"></a></dt>
 <dd><p>For collecting successful feature query metadata</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>engine</strong> (<em>object</em>) – Engine object</p></li>
 <li><p><strong>schema</strong> (<em>str</em>) – schema of interest</p></li>
 <li><p><strong>table_list</strong> (<em>list</em>) – Table names of successful feature queries</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>table_name and column_name</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>DataFrame</p>
 </dd>
 </dl>
@@ -496,16 +445,16 @@ If None, coldstart/query_bank is used. Defaults to None.</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="coldstart.query.convert_categorical">
-<span class="sig-prename descclassname"><span class="pre">coldstart.query.</span></span><span class="sig-name descname"><span class="pre">convert_categorical</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.query.convert_categorical" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">coldstart.query.</span></span><span class="sig-name descname"><span class="pre">convert_categorical</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.query.convert_categorical" title="Permalink to this definition"></a></dt>
 <dd><p>For attempting categorical conversion</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>s</strong> (<em>Series</em>) – To attempt categorical conversion on</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Converted to categorical data type</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>Series</p>
 </dd>
 </dl>
@@ -513,19 +462,19 @@ If None, coldstart/query_bank is used. Defaults to None.</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="coldstart.query.drop_tables">
-<span class="sig-prename descclassname"><span class="pre">coldstart.query.</span></span><span class="sig-name descname"><span class="pre">drop_tables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">engine</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.query.drop_tables" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">coldstart.query.</span></span><span class="sig-name descname"><span class="pre">drop_tables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">engine</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.query.drop_tables" title="Permalink to this definition"></a></dt>
 <dd><p>For dropping intermediate tables</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>engine</strong> (<em>object</em>) – Engine object</p></li>
 <li><p><strong>table_list</strong> (<em>list</em>) – Tables to drop</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Results: query_name, status, run_time</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>list</p>
 </dd>
 </dl>
@@ -533,10 +482,10 @@ If None, coldstart/query_bank is used. Defaults to None.</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="coldstart.query.freeze_queries">
-<span class="sig-prename descclassname"><span class="pre">coldstart.query.</span></span><span class="sig-name descname"><span class="pre">freeze_queries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">export_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.query.freeze_queries" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">coldstart.query.</span></span><span class="sig-name descname"><span class="pre">freeze_queries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">export_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.query.freeze_queries" title="Permalink to this definition"></a></dt>
 <dd><p>Instruction to save queries to specified directory</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>query_dir</strong> (<em>str</em>) – Directory to copy feature queries from</p></li>
 <li><p><strong>export_dir</strong> (<em>str</em>) – Directory to export feature queries to</p></li>
@@ -548,16 +497,16 @@ If None, coldstart/query_bank is used. Defaults to None.</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="coldstart.query.multi_query">
-<span class="sig-prename descclassname"><span class="pre">coldstart.query.</span></span><span class="sig-name descname"><span class="pre">multi_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query_tuples</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.query.multi_query" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">coldstart.query.</span></span><span class="sig-name descname"><span class="pre">multi_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query_tuples</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.query.multi_query" title="Permalink to this definition"></a></dt>
 <dd><p>For running concurrent queries via threading</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>query_tuples</strong> (<em>list</em>) – List of tuples: query_name, engine, sql, return_df</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Results: query_name, status, run_time</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>list</p>
 </dd>
 </dl>
@@ -565,19 +514,19 @@ If None, coldstart/query_bank is used. Defaults to None.</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="coldstart.query.name_table">
-<span class="sig-prename descclassname"><span class="pre">coldstart.query.</span></span><span class="sig-name descname"><span class="pre">name_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.query.name_table" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">coldstart.query.</span></span><span class="sig-name descname"><span class="pre">name_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.query.name_table" title="Permalink to this definition"></a></dt>
 <dd><p>Names tables according to pattern</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>schema</strong> (<em>str</em>) – Name of schema</p></li>
 <li><p><strong>query_name</strong> (<em>str</em>) – Name of query</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Table name</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
@@ -585,20 +534,20 @@ If None, coldstart/query_bank is used. Defaults to None.</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="coldstart.query.prep_join_query">
-<span class="sig-prename descclassname"><span class="pre">coldstart.query.</span></span><span class="sig-name descname"><span class="pre">prep_join_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_table</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.query.prep_join_query" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">coldstart.query.</span></span><span class="sig-name descname"><span class="pre">prep_join_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_table</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.query.prep_join_query" title="Permalink to this definition"></a></dt>
 <dd><p>For preparing final join query</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>schema</strong> (<em>str</em>) – schema of interest</p></li>
 <li><p><strong>table_df</strong> (<em>DataFrame</em>) – Containing table_name and column_name</p></li>
 <li><p><strong>feature_table</strong> (<em>str</em>) – Specified name of final table. Defaults to None.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Join SQL, Name of final table</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>str, str</p>
 </dd>
 </dl>
@@ -606,20 +555,20 @@ If None, coldstart/query_bank is used. Defaults to None.</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="coldstart.query.run_query">
-<span class="sig-prename descclassname"><span class="pre">coldstart.query.</span></span><span class="sig-name descname"><span class="pre">run_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">engine</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sql</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_df</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.query.run_query" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">coldstart.query.</span></span><span class="sig-name descname"><span class="pre">run_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">engine</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sql</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_df</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.query.run_query" title="Permalink to this definition"></a></dt>
 <dd><p>For running queries</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>engine</strong> (<em>object</em>) – Engine object</p></li>
 <li><p><strong>sql</strong> (<em>str</em>) – SQL query</p></li>
 <li><p><strong>return_df</strong> (<em>bool</em>) – Will return dataframe. Defaults to True.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Query results</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>DataFrame</p>
 </dd>
 </dl>
@@ -627,16 +576,16 @@ If None, coldstart/query_bank is used. Defaults to None.</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="coldstart.query.run_threaded_query">
-<span class="sig-prename descclassname"><span class="pre">coldstart.query.</span></span><span class="sig-name descname"><span class="pre">run_threaded_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query_tuple</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.query.run_threaded_query" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">coldstart.query.</span></span><span class="sig-name descname"><span class="pre">run_threaded_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query_tuple</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.query.run_threaded_query" title="Permalink to this definition"></a></dt>
 <dd><p>Wrapper function for running concurrent queries via threading</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>query_tuple</strong> (<em>tuple</em>) – query_name, engine, sql, return_df</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Results: query_name, status, run_time</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>tuple</p>
 </dd>
 </dl>
@@ -644,10 +593,10 @@ If None, coldstart/query_bank is used. Defaults to None.</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="coldstart.query.stage_leftmost_table">
-<span class="sig-prename descclassname"><span class="pre">coldstart.query.</span></span><span class="sig-name descname"><span class="pre">stage_leftmost_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">engine</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">leftmost_table</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.query.stage_leftmost_table" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">coldstart.query.</span></span><span class="sig-name descname"><span class="pre">stage_leftmost_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">engine</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">leftmost_table</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.query.stage_leftmost_table" title="Permalink to this definition"></a></dt>
 <dd><p>Stages leftmost table to include idx while performing data validation</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>engine</strong> (<em>object</em>) – Engine object</p></li>
 <li><p><strong>schema</strong> (<em>str</em>) – schema of interest</p></li>
@@ -657,7 +606,7 @@ If None, coldstart/query_bank is used. Defaults to None.</p></li>
 <li><p><strong>dt2</strong> (<em>str</em>) – max_date</p></li>
 </ul>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>ValueError</strong> – Error for invalid entity_id column</p></li>
 <li><p><strong>ValueError</strong> – Error for missing y column</p></li>
@@ -666,10 +615,10 @@ If None, coldstart/query_bank is used. Defaults to None.</p></li>
 <li><p><strong>ValueError</strong> – Error for invalid date format</p></li>
 </ul>
 </dd>
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>Staged table name, Results: query_name, status, run_time</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>str, tuple</p>
 </dd>
 </dl>
@@ -677,10 +626,10 @@ If None, coldstart/query_bank is used. Defaults to None.</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="coldstart.query.template_queries">
-<span class="sig-prename descclassname"><span class="pre">coldstart.query.</span></span><span class="sig-name descname"><span class="pre">template_queries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">engine</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">staged_table</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.query.template_queries" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">coldstart.query.</span></span><span class="sig-name descname"><span class="pre">template_queries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">engine</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">staged_table</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.query.template_queries" title="Permalink to this definition"></a></dt>
 <dd><p>Templates queries with LEFTMOST_TABLE</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>engine</strong> (<em>object</em>) – Engine object</p></li>
 <li><p><strong>schema</strong> (<em>str</em>) – schema of interest</p></li>
@@ -688,14 +637,14 @@ If None, coldstart/query_bank is used. Defaults to None.</p></li>
 <li><p><strong>query_dict</strong> (<em>dict</em>) – Queries to template</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p><dl class="simple">
 <dt>Dictionary of query_name: table_name, list of tamplated</dt><dd><p>queries</p>
 </dd>
 </dl>
 </p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>dict, list</p>
 </dd>
 </dl>
@@ -703,21 +652,21 @@ If None, coldstart/query_bank is used. Defaults to None.</p></li>
 
 </section>
 <section id="module-coldstart">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-coldstart" title="Permalink to this heading">¶</a></h2>
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-coldstart" title="Permalink to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="coldstart.FeatureFactory">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldstart.</span></span><span class="sig-name descname"><span class="pre">FeatureFactory</span></span><a class="headerlink" href="#coldstart.FeatureFactory" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldstart.</span></span><span class="sig-name descname"><span class="pre">FeatureFactory</span></span><a class="headerlink" href="#coldstart.FeatureFactory" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p> coldstart’s main class</p>
+<p>Coldstart’s main class</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="coldstart.FeatureFactory.get_dataframe">
-<span class="sig-name descname"><span class="pre">get_dataframe</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.FeatureFactory.get_dataframe" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_dataframe</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.FeatureFactory.get_dataframe" title="Permalink to this definition"></a></dt>
 <dd><p>For returning a dataframe object</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>Training data</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>DataFrame</p>
 </dd>
 </dl>
@@ -725,13 +674,13 @@ If None, coldstart/query_bank is used. Defaults to None.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="coldstart.FeatureFactory.get_table">
-<span class="sig-name descname"><span class="pre">get_table</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.FeatureFactory.get_table" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_table</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.FeatureFactory.get_table" title="Permalink to this definition"></a></dt>
 <dd><p>For returning final feature table name</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>Table name containing training data</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>str</p>
 </dd>
 </dl>
@@ -739,10 +688,10 @@ If None, coldstart/query_bank is used. Defaults to None.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="coldstart.FeatureFactory.run">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">leftmost_table</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_table</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domains</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queries</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">export_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drop_intermedieate_tables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_df</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compute_df</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_on_error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">downcast</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batching</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.FeatureFactory.run" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">leftmost_table</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_table</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domains</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queries</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">export_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drop_intermedieate_tables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_df</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compute_df</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_on_error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">downcast</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batching</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.FeatureFactory.run" title="Permalink to this definition"></a></dt>
 <dd><p>Used for running FeatureFactory</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>leftmost_table</strong> (<em>str</em>) – Left-most table used for constraining feature
 queries. Should include entity_id and y. Can also include
@@ -776,7 +725,7 @@ Defaults to False.</p></li>
 Defaults to None.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>ValueError</strong> – Error for missing engine</p></li>
 <li><p><strong>ValueError</strong> – Error for errored queries</p></li>
@@ -787,13 +736,13 @@ Defaults to None.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="coldstart.FeatureFactory.start_engine">
-<span class="sig-name descname"><span class="pre">start_engine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_spec</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.FeatureFactory.start_engine" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">start_engine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_spec</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.FeatureFactory.start_engine" title="Permalink to this definition"></a></dt>
 <dd><p>Starts SQLAlchemy engine</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>db_spec</strong> (<em>dict</em>) – Used as the config for create_engine</p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>ValueError</strong> – Error for missing dialect</p></li>
 <li><p><strong>ValueError</strong> – Error for missing schema</p></li>
@@ -807,7 +756,7 @@ Defaults to None.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="coldstart.FeatureFactory.stop_engine">
-<span class="sig-name descname"><span class="pre">stop_engine</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.FeatureFactory.stop_engine" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">stop_engine</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#coldstart.FeatureFactory.stop_engine" title="Permalink to this definition"></a></dt>
 <dd><p>Stops SQLAlchemy engine</p>
 </dd></dl>
 
@@ -818,49 +767,32 @@ Defaults to None.</p></li>
 
 
            </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-      
-        <a href="modules.html" class="btn btn-neutral float-left" title="coldstart " accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="coldstart-oss" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &copy; Copyright 
-
-    </p>
+    <p>&#169; Copyright .</p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

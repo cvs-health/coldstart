@@ -14,7 +14,7 @@ The general order of events looks like this:
 
 ## Documentation
 
-[Documentation](https://github.com/cvs-health/pages/1651288/coldstart/) is hosted on GitHub Pages.
+[Documentation](https://sturdy-robot-8dd63740.pages.github.io/) is hosted on GitHub Pages.
 
 ## Installation
 
