@@ -1,5 +1,5 @@
-coldstart-oss
-=============
+coldstart
+=========
 
 .. toctree::
    :maxdepth: 4
