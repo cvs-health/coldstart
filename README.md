@@ -2,15 +2,13 @@
 
 Coldstart is a package for automatic data collection and feature engineering that should be used by new and seasoned data scientists/engineers interested in accelerating model development.
 
-Data collection and feature engineering are among the most tedious and time-consuming steps in the data science workflow. Coldstart aims to solve this problem by encapsulating efficient patterns and abstracting away low-level details associated with dynamic query templating, query optimization, concurrent execution, memory management, data leakage, and pipeline deployment.
+Data collection and feature engineering are among the most tedious and time-consuming steps in the data science workflow. Coldstart aims to solve this problem by encapsulating efficient patterns and abstracting away low-level details associated with dynamic query templating, query optimization, concurrent execution, memory management, data leakage, and pipeline deployment. The general order of events looks like this:
+
+<div style="text-align:center"><img src="examples/coldstart_flow.png" /></div>
 
 Coldstart is meant to be a "Goldilocks" solution that sits somewhere between a collection of version-controlled queries and a full-fledged feature store. If you're making batch predictions that do not require ultra-low latency guarantees or if you're not taking full advantage of the warehouse’s available computing resources (i.e., waiting for queries dozens of queries to run one-by-one), then this package might be perfect for you.
 
 Coldstart embraces a code that writes code mindset by exposing a powerful class (`FeatureFactory`) that retrieves data from various user-defined domains by establishing 1:1 or 1:M relationships with peer-reviewed queries that are templated at runtime based on user input and executed concurrently in one or many batches. The output comes in the form of a single wide dataframe that can be held in memory (i.e., pandas) or on disk (i.e., dask) and then fed directly into a feature engineering/modeling pipeline (e.g., sklearn). Row-level observations are identifiable through the use of composite indexes that have two parts to them: an entity component and a temporal component, which satisfy most tabular supervised ML use cases. When it's time to move from development to production, a user can "freeze" the queries that they will be using in their prediction pipeline.
-
-The general order of events looks like this:
-
-<div style="text-align:center"><img src="examples/coldstart_flow.png" /></div>
 
 ## Documentation
 
