@@ -6,9 +6,7 @@ Data collection and feature engineering are among the most tedious and time-cons
 
 <div style="text-align:center"><img src="examples/coldstart_flow.png" /></div>
 
-Coldstart is meant to be a "Goldilocks" solution that sits somewhere between a collection of version-controlled queries and a full-fledged feature store. If you're making batch predictions that do not require ultra-low latency guarantees or if you're not taking full advantage of the warehouse’s available computing resources (i.e., waiting for queries dozens of queries to run one-by-one), then this package might be perfect for you.
-
-Coldstart embraces a code that writes code mindset by exposing a powerful class (`FeatureFactory`) that retrieves data from various user-defined domains by establishing 1:1 or 1:M relationships with peer-reviewed queries that are templated at runtime based on user input and executed concurrently in one or many batches. The output comes in the form of a single wide dataframe that can be held in memory (i.e., pandas) or on disk (i.e., dask) and then fed directly into a feature engineering/modeling pipeline (e.g., sklearn). Row-level observations are identifiable through the use of composite indexes that have two parts to them: an entity component and a temporal component, which satisfy most tabular supervised ML use cases. When it's time to move from development to production, a user can "freeze" the queries that they will be using in their prediction pipeline.
+Coldstart is meant to be a "Goldilocks" solution that sits somewhere between a collection of version-controlled queries and a full-fledged feature store. If you're making batch predictions that do not require ultra-low latency guarantees or if you're not taking full advantage of the warehouse’s available computing resources (i.e., waiting for queries dozens of queries to run one-by-one), then this package might be perfect for you!
 
 ## Documentation
 
@@ -23,6 +21,8 @@ pip install coldstart
 ```
 
 ## Usage
+
+Coldstart embraces a code that writes code mindset by exposing a powerful class (`FeatureFactory`) that retrieves data from various user-defined domains by establishing 1:1 or 1:M relationships with peer-reviewed queries that are templated at runtime based on user input and executed concurrently in one or many batches. The output comes in the form of a single wide dataframe that can be held in memory (i.e., pandas) or on disk (i.e., dask) and then fed directly into a feature engineering/modeling pipeline (e.g., sklearn). Row-level observations are identifiable through the use of composite indexes that have two parts to them: an entity component and a temporal component, which satisfy most tabular supervised ML use cases. When it's time to move from development to production, users can "freeze" queries that they will be using in their production pipeline.
 
 Here is a basic example of how to use `FeatureFactory`:
 
