@@ -10,7 +10,7 @@ Coldstart is meant to be a "Goldilocks" solution that sits somewhere between a c
 
 ## Documentation
 
-[Documentation](https://sturdy-robot-8dd63740.pages.github.io/) is hosted on GitHub Pages.
+[Documentation](https://cvs-health.github.io/coldstart/) is hosted on GitHub Pages.
 
 ## Installation
 
