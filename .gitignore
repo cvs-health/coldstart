@@ -21,6 +21,7 @@ dist
 *.iml
 .DS_Store
 *.log
+.eggs
 
 # VS Code
 \.vscode/
