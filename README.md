@@ -6,7 +6,7 @@ Data collection and feature engineering are among the most tedious and time-cons
 
 <div style="text-align:center"><img src="examples/coldstart_flow.png" /></div>
 
-Coldstart is meant to be a "Goldilocks" solution that sits somewhere between a collection of version-controlled queries and a full-fledged feature store. If you're making batch predictions that do not require ultra-low latency guarantees or if you're not taking full advantage of the warehouse’s available computing resources (i.e., waiting for queries dozens of queries to run one-by-one), then this package might be perfect for you!
+Coldstart is meant to be a "Goldilocks" solution that sits somewhere between a collection of version-controlled queries and a full-fledged feature store. If you're making batch predictions that do not require ultra-low latency guarantees or if you're not taking full advantage of the warehouse’s available computing resources (i.e., waiting for dozens of queries to run one-by-one), then this package might be perfect for you!
 
 ## Documentation
 
