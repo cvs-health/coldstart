@@ -1,4 +1,4 @@
-![](docs/images/coldstart.png)
+![](examples/coldstart.png)
 
 Coldstart is a package for automatic data collection and feature engineering that should be used by new and seasoned data scientists/engineers interested in accelerating model development.
 
@@ -10,7 +10,7 @@ Coldstart embraces a code that writes code mindset by exposing a powerful class 
 
 The general order of events looks like this:
 
-<div style="text-align:center"><img src="docs/images/coldstart_flow.png" /></div>
+<div style="text-align:center"><img src="examples/coldstart_flow.png" /></div>
 
 ## Documentation
 
