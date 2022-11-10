@@ -89,9 +89,9 @@ def|1|2021-01-01|2021-12-31
 Queries in the query bank must adhere to an established pattern. It's this pattern that makes consistent dynamic runtime templating possible. All queries must:
 
 - Have a unique file name
-    > **Tip**: By beginning the file name with the corresponding entity and domain name, you will easily be able to estasblish feature lineage back to the query because the final table appends the query name to the column name to ensure uniqueness 
+    > **Tip**: By beginning the file name with the corresponding entity and domain name, you will easily be able to establishing feature lineage back to the query because the final table appends the query name to the column name to ensure uniqueness 
 - Be tagged with `DIALECT`, `ENTITY`, and `DOMAIN`
-- Use the default `idx` column (which is a concatonation of `entity_id` + `min_date` + `max_date`) in the **SELECT** in all CTEs/subqueries and the outer-most query
+- Use the default `idx` column (which is a concatenation of `entity_id` + `min_date` + `max_date`) in the **SELECT** in all CTEs/subqueries and the outer-most query
     > **Tip**: You do not need to carry the `entity_id`, `min_date`, or `max_date` down through CTEs/subqueries because it is baked into `idx`
 - Use the `{LEFTMOST_TABLE}` variable as the left-most table in the **FROM**
 - Use `min_date` and `max_date` to constrain relevant date columns in the **WHERE** if dates are involved
