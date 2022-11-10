@@ -49,7 +49,7 @@ db_spec = {
 # Start engine
 ff.start_engine(db_spec)
 
-# Run feature_factory
+# Run FeatureFactory
 ff.run(
     leftmost_table='my_schema.my_leftmost_table', # table with columns: team_id and y
     feature_table='my_schema.my_feature_table',
@@ -58,13 +58,11 @@ ff.run(
     date_range=['2010-01-01', '2015-01-01'],
 )
 
-# Return dataframe
-features_df = ff.get_dataframe()
-
 # Stop engine
 ff.stop_engine()
 
-# View dataframe
+# Return dataframe
+features_df = ff.get_dataframe()
 features_df.head()
 ```
 
