@@ -68,7 +68,7 @@ features_df.head()
 
 See [this notebook](examples/Quickstart.ipynb) for a more thorough example.
 
-Note that `my_schema.my_leftmost_table` must be a predefined table with at least 2 columns: `entity_id` and `y` where entity_id corresponds with the tagged queries in the query bank and y corresponds with the dependent variable that you're eventually modeling. Optionally, you can also include a `min_date` and a `max_date` column so that each row is parameterized accordingly (if you do not include dates in your table, the `date_range` argument will be used for all records). A typical `leftmost_table` will look like this:
+Note that `leftmost_table` must be a predefined table with at least 2 columns: `entity_id` and `y` where entity_id corresponds with the tagged queries in the query bank and y corresponds with the dependent variable that you're eventually modeling. Optionally, you can also include a `min_date` and a `max_date` column so that each row is parameterized accordingly (if you do not include dates in your table, the `date_range` argument will be used for all records). A typical `leftmost_table` will look like this:
 
 entity_id|y
 ---|---
