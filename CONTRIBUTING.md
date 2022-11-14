@@ -4,6 +4,10 @@ Thank you for wanting to explore and contribute to _coldstart_!
 
 Below are the instructions on how to setup a development version of coldstart, but contributions to the documentation and issue-resolving are very welcome.
 
+## Sign CLA
+
+Before contributing to this CVS Health sponsored project, you will need to sign the associated [Contributor License Agreement](https://forms.office.com/r/HvYxTheDG5).
+
 ## Setup for Development
 
 * First, clone the repo:
