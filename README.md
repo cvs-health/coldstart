@@ -41,7 +41,7 @@ print(f'Available domains: {my_domains}')
 
 # Set database spec
 db_spec = {
-    'dialect': 'bigquery',
+    'dialect': 'bigquery', # should match query DIALECT tags and SQLAlchemy name naming
     'project_id': PROJECT_ID, # replace with your project if using Big Query
     'schema': 'my_schema' # replace with your schema/dataset
 }
